@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Outfit", sans-serif;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card {
+    width: 18rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: var(--Very-dark-blue-card-BG);
+    box-shadow: 0 28px 16px 16px rgba(0, 0, 0, 0.08);;
+}
+
+.img-wrapper {
+    position: relative;
+    
+    
+}
+.img-wrapper > img {
+    display: block;
+    border-radius: .5rem;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.img-wrapper > .view {
+    position: absolute;
+    background: rgba(0, 255, 247, 0.6);
+    transition: 300ms ease-in;
+    cursor: pointer;
+    border-radius: .5rem;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    padding-top: 1rem;
+    color: var(--White);
+}
+
+h2:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+p {
+    font-weight: 300;
+    color: var(--Soft-blue);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.card ul {
+    color: var(--Soft-blue);
+    padding-left: 0;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+ul {
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+
+
+.card ul li {
+    display: flex;
+    align-items: center;
+}
+
+.card ul li img {
+    margin-right: .5rem;
+}
+
+.card ul li:first-child {
+    color: var(--Cyan);
+}
+
+.img-wrapper > .view {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .view {
+    opacity: 1;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.card .author img {
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    display: flex;
+    width: 2rem;
+}
+
+.card .author p {
+    padding-left: 1rem;
+}
+
+span:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    padding-top: 1rem; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
